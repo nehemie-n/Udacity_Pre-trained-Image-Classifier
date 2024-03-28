@@ -326,16 +326,8 @@ pct_correct_dogs    : 100.0%
 pct_correct_breed   : 93.3%
 pct_correct_notdogs : 100.0%
 
-INCORRECTLY CLASSIFIED DOG BREEDS:
-Real:           great horned owl   Classifier: ruffed grouse, partridge, bonasa umbellus
-Real:                      gecko   Classifier:            banded gecko, gecko
-Real:                     rabbit   Classifier: wood rabbit, cottontail, cottontail rabbit, rabbit
-Real:                      skunk   Classifier:     skunk, polecat, wood pussy
-Real:               fox squirrel   Classifier: fox squirrel, eastern fox squirrel, sciurus niger
-Real:                      gecko   Classifier: tailed frog, bell toad, ribbed toad, tailed toad, ascaphus trui
-Real:                        cat   Classifier:                           lynx
-Real:                        cat   Classifier:              egyptian cat, cat
-Real:                        cat   Classifier:          tabby, tabby cat, cat
-Real:                 polar bear   Classifier: ice bear, polar bear, ursus maritimus, thalarctos maritimus
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+Real:             great pyrenees   Classifier:                         kuvasz
 
-** Total Elapsed Runtime: 0:1:25
+** Total Elapsed Runtime: 0:1:29
