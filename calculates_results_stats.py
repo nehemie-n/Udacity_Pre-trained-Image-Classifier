@@ -42,7 +42,7 @@
 #       in the return statement with the results_stats_dic dictionary that you create
 #       with this function
 #
-def calculates_results_stats(results_dic):
+def calculates_results_stats(results_dic: dict[str, list[int]]):
     """
     Calculates statistics of the results of the program run using classifier's model
     architecture to classifying pet images. Then puts the results statistics in a
@@ -81,24 +81,24 @@ def calculates_results_stats(results_dic):
             "n_images": len(results_dic),
         }
     )
-    results_stats_dic["n_match"] = sum(results_dic[key][2] for key in results_dic)
-    results_stats_dic["n_dogs_img"] = sum(results_dic[key][3] for key in results_dic)
+    results_stats_dic["n_match"] = sum(value[2] for value in results_dic.values())
+    results_stats_dic["n_dogs_img"] = sum(value[3] for value in results_dic.values())
     results_stats_dic["n_notdogs_img"] = (
         results_stats_dic["n_images"] - results_stats_dic["n_dogs_img"]
     )
 
     # correct dogs
     results_stats_dic["n_correct_dogs"] = sum(
-        1 if (results_dic[key][3] and results_dic[key][4] == 1) else 0
-        for key in results_dic
+        1 if (value[3] and value[4] == 1) else 0
+        for value in results_dic.values()
     )
     results_stats_dic["n_correct_notdogs"] = sum(
-        1 if (results_dic[key][3] == 0 and results_dic[key][4] == 0) else 0
-        for key in results_dic
+        1 if (value[3] == 0 and value[4] == 0) else 0
+        for value in results_dic.values()
     )
     # correct breed
     results_stats_dic["n_correct_breed"] = sum(
-        results_dic[key][4] for key in results_dic if results_dic[key][2] == 1
+        value[3] for value in results_dic.values() if value[2] == 1
     )
     results_stats_dic["pct_match"] = (
         results_stats_dic["n_match"] / (results_stats_dic["n_images"] or 0) * 100.0

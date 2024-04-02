@@ -44,14 +44,14 @@ def get_pet_labels(image_dir):
     # function
     results_dic = dict()
     # Retrieve the filenames from image_dir
-    file_names = listdir(image_dir)
+    file_names: list[str] = listdir(image_dir)
     # Create a dictionary of pet labels based upon the filenames
-    for idx, file_name in enumerate(file_names):
+    for file_name in file_names:
         image_label = file_name.split('.')[0]
         image_label = image_label.lower()
         image_label = image_label.strip()
-        image_label: list = image_label.split("_")
-        image_label.pop()
-        image_label: str = " ".join(image_label)
+        image_labels: list[str] = image_label.split("_")
+        image_labels.pop()
+        image_label = " ".join(image_labels)
         results_dic[file_name] = [image_label]
     return results_dic

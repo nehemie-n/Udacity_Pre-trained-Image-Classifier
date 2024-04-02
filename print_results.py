@@ -31,7 +31,7 @@
 #       Notice that this function doesn't to return anything because it  
 #       prints a summary of the results using results_dic and results_stats_dic
 # 
-def print_results(results_dic, results_stats_dic, model, 
+def print_results(results_dic: dict[str, list[int]], results_stats_dic, model, 
                   print_incorrect_dogs = False, print_incorrect_breed = False):
     """
     Prints summary results on the classification and then prints incorrectly 
@@ -84,7 +84,5 @@ def print_results(results_dic, results_stats_dic, model,
         print("\nINCORRECT Dog Breed Assignment:")
         for key, value in results_dic.items():
             # Pet Image Label is-a-Dog, classified as-a-dog but is WRONG breed
-            if ( sum(results_dic[key][3:]) == 2 and
-                results_dic[key][2] == 0 ):
-                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
-                                                          results_dic[key][1]))
+            if value[3] == 1 and value[4] == 1 and value[2] == 0:
+                print("Real: {:>26}   Classifier: {:>30}".format(value[0], value[1]))
