@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Nehemie Niyomahoro <nehemie054@gmail.com>
 # DATE CREATED:  28/03/2024
-# REVISED DATE: 28/03/2024
+# REVISED DATE: 02/04/2024 
 # PURPOSE: Create a function calculates_results_stats that calculates the
 #          statistics of the results of the programrun using the classifier's model
 #          architecture to classify the images. This function will use the

@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Nehemie Niyomahoro <nehemie054@gmail.com>
 # DATE CREATED:  23/03/2024
-# REVISED DATE: 23/03/2024
+# REVISED DATE: 02/04/2024 
 # PURPOSE: Create a function classify_images that uses the classifier function
 #          to create the classifier labels and then compares the classifier
 #          labels to the pet image labels. This function inputs:

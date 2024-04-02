@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Nehemie Niyomahoro <nehemie054@gmail.com>
 # DATE CREATED:  28/03/2024                                
-# REVISED DATE: 28/03/2024
+# REVISED DATE: 02/04/2024 
 # PURPOSE: Create a function adjust_results4_isadog that adjusts the results 
 #          dictionary to indicate whether or not the pet image label is of-a-dog, 
 #          and to indicate whether or not the classifier image label is of-a-dog.
